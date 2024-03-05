@@ -20,6 +20,10 @@ function setup() {
 
 function draw() {
     background(100);
+    noFill();
+    strokeWeight(5);
+    stroke(0);
+    rect(0, 0, width, height);
     for (let boid of flock) {
         boid.flock(flock);
         boid.turn();
