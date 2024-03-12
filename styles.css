@@ -1,9 +1,17 @@
 html {
     background: rgba(0, 0, 0, 0.606);
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #btnContainer {
     position: absolute;
-    top: 5px;
+    bottom: 5px;
     margin: 0px;
     padding: 0px;
     /* border: 1px solid black; */
@@ -14,6 +22,40 @@ html {
     width:100%;
     height: 40px;
 }
+
+#sliders {
+    display: flex;
+    position: absolute;
+    /* border: 1px solid green; */
+    width: 85%;
+    justify-content: space-evenly;
+    align-items: center;
+    top: 20px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 20px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+
+  .slider:hover {
+    opacity: 1;
+  }
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #000000be;
+    cursor: pointer;
+  }
 
 .btn {
     font-size: 26px;
