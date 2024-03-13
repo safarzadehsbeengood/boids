@@ -1,7 +1,7 @@
 let cohesionRadius = 70;
 let alignmentRadius = 60;
 let avoidanceRadius = 40;
-let turnFactor = 0.05;
+let turnFactor = 0.1;
 
 class Boid {
     constructor(x, y, i) {
@@ -131,17 +131,22 @@ class Boid {
         this.angle = this.velocity.heading();
         strokeWeight(0);
         stroke(255);
-        fill(0, 255, 200, 41);
-        circle(this.position.x, this.position.y, alignmentRadius*2);
-        fill(255, 0, 0, 71);
-        circle(this.position.x, this.position.y, avoidanceRadius*2);
-        fill(0, 255, 0, 10);
-        circle(this.position.x, this.position.y, cohesionRadius*2);
         push();
         translate(this.position.x, this.position.y);
         rotate(this.angle);
         fill(255);
         triangle(15, 0, 0, 5, 0, -5);
         pop();
+    }
+
+    showView() {
+        strokeWeight(0);
+        stroke(255);
+        fill(0, 255, 200, 41);
+        circle(this.position.x, this.position.y, alignmentRadius*2);
+        fill(255, 0, 0, 71);
+        circle(this.position.x, this.position.y, avoidanceRadius*2);
+        fill(0, 255, 0, 10);
+        circle(this.position.x, this.position.y, cohesionRadius*2);
     }
 }

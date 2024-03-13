@@ -1,5 +1,6 @@
 const flock = [];
-let alignSlider, cohesionSlider, separationSlider;
+let showView = false;
+let alignSlider, cohesionSlider, separationSlider, viewButton;
 const n = 20;
 let removeBtn = document.getElementById('removeBtn');
 let addBtn = document.getElementById('addBtn');
@@ -11,6 +12,9 @@ function setup() {
     alignSlider = createSlider(0, 2, 1.5, 0.1);
     cohesionSlider = createSlider(0, 2, 1, 0.1);
     separationSlider = createSlider(0, 2, 2, 0.1);
+    viewButton = createCheckbox("View", false);
+    viewButton.class("btn");
+    viewButton.parent("btnContainer");
     alignSlider.parent('sliders');
     cohesionSlider.parent('sliders');
     separationSlider.parent('sliders');
@@ -34,6 +38,9 @@ function draw() {
         boid.turn();
         boid.update();
         boid.show();
+        if (viewButton.checked()) {
+            boid.showView();
+        }
     }
 }
 
