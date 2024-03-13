@@ -3,11 +3,20 @@ html {
 }
 
 body {
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
+#infoContainer {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    position: absolute;
+    top: 2px;
+} 
 
 #btnContainer {
     position: absolute;
@@ -33,6 +42,12 @@ body {
     top: 20px;
 }
 
+#count {
+    position: absolute;
+    left: 360px;
+    bottom: 20px;
+}
+
 .slider {
     -webkit-appearance: none;
     width: 100%;
@@ -56,6 +71,19 @@ body {
     background: #000000be;
     cursor: pointer;
   }
+
+#boidsSlider {
+    height: 10px;
+    position: absolute;
+    left: 50px;
+    bottom: 20px;
+    width: 300px;
+}
+
+#boidsSlider::-webkit-slider-thumb {
+    height: 10px;
+    width: 15px;
+}
 
 .btn {
     font-size: 26px;

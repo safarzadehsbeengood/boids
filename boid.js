@@ -1,5 +1,5 @@
-let cohesionRadius = 70;
-let alignmentRadius = 60;
+let cohesionRadius = 90;
+let alignmentRadius = 70;
 let avoidanceRadius = 40;
 let turnFactor = 0.1;
 
@@ -143,10 +143,10 @@ class Boid {
         strokeWeight(0);
         stroke(255);
         fill(0, 255, 200, 41);
-        circle(this.position.x, this.position.y, alignmentRadius*2);
+        circle(this.position.x, this.position.y, alignmentRadius);
         fill(255, 0, 0, 71);
-        circle(this.position.x, this.position.y, avoidanceRadius*2);
+        circle(this.position.x, this.position.y, avoidanceRadius);
         fill(0, 255, 0, 10);
-        circle(this.position.x, this.position.y, cohesionRadius*2);
+        circle(this.position.x, this.position.y, cohesionRadius);
     }
 }
