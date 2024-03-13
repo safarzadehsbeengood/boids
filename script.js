@@ -42,7 +42,7 @@ function updateBoids(val) {
 }
 
 function draw() {
-    background(100);
+    background(0);
     noFill();
     strokeWeight(5);
     stroke(255);

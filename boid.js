@@ -144,9 +144,9 @@ class Boid {
         stroke(255);
         fill(0, 255, 200, 41);
         circle(this.position.x, this.position.y, alignmentRadius);
-        fill(255, 0, 0, 71);
+        fill(255, 0, 0, 41);
         circle(this.position.x, this.position.y, avoidanceRadius);
-        fill(0, 255, 0, 10);
+        fill(0, 255, 0, 20);
         circle(this.position.x, this.position.y, cohesionRadius);
     }
 }
